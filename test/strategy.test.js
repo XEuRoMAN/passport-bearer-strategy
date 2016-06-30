@@ -3,11 +3,17 @@
 var Strategy = require('../lib/strategy');
 
 describe('Strategy', function () {
-    var strategy = new Strategy();
+    var strategy = new Strategy(function () {
 
-    it('authenticate should throw error', function () {
+    });
+
+    it('should be named bearer', function () {
+        expect(strategy.name).to.equal('bearer');
+    });
+
+    it('should throw if constructed without a verify callback', function () {
         expect(function () {
-            strategy.authenticate();
-        }).to.throw(Error, 'Strategy#authenticate must be overridden by subclass');
+            new Strategy();
+        }).to.throw(TypeError, 'HTTPBearerStrategy requires a verify callback');
     });
 });
