@@ -1,0 +1,44 @@
+{
+    "name": "passport-bearer-strategy",
+    "version": "1.0.0",
+    "description": "HTTP Bearer authentication strategy for Passport.",
+    "keywords": [
+        "passport",
+        "strategy",
+        "http",
+        "bearer",
+        "token",
+        "oauth"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/xeuroman/passport-bearer-strategy.git"
+    },
+    "bugs": {
+        "url": "http://github.com/xeuroman/passport-bearer-strategy/issues"
+    },
+    "author": {
+        "name": "Justas Šepronas",
+        "email": "justas.sepronas@gmail.com"
+    },
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "http://www.opensource.org/licenses/MIT"
+        }
+    ],
+    "main": "./lib",
+    "dependencies": {
+        "passport-strategy": "1.x.x"
+    },
+    "devDependencies": {
+        "mocha": "1.x.x",
+        "chai": "1.x.x"
+    },
+    "engines": {
+        "node": ">= 0.4.0"
+    },
+    "scripts": {
+        "test": "node_modules/.bin/mocha --reporter spec --require test/bootstrap/node test/*.test.js"
+    }
+}
